@@ -1,0 +1,21 @@
+（有修改）Catfish.java:规定了鱼的属性。定义了Catfish类、成员变量column和energyLevel、三种方法getColumn（返回column的值）、
+		    swimRight（当格数小于10且能量大于0时右移否则不动，每游一格能量减1）、getImage（根据鱼的状态返回不同图片）
+	HtmlAnchor.java:定义了成员变量displayText和targetLocation，构造方法HtmlAnchor（将构造函数中的两个字符串赋值给局部变量）、
+		           方法buildHtml（返回含有两个成员变量的表示网址的字符串）
+	Htmlmage.java:与上同理，最后的方法返回的是表示图片地址的字符串
+	HtmlPage.java:规定了创建Servlet页面的方法。创建了pageTitle、pageBody、bgImage、bgColor四个成员变量、方法getHeader（返回html格式构造标题的字符串）、
+		        方法getFooter（返回html格式中</html>的字符串）、方法setTitle、setBackgroundImage、setBackgroundColor
+		     （将构造函数中的字符串赋值给相应的局部变量）、getBody（返回html格式规定<body>标签中属性的字符串）、
+		       getDoctype（声明html格式）、addText（使成员变量包含paramString指向的内容）、buildHtml（返回以上几个get方法）
+	HtmlTable.java:规定了关于构建池塘的方法。同理创建成员变量，构造方法HtmlTable(将字符串“<table>”、规定表格边界与内容距离的标签字符串赋给tableBody）、方法
+		        addHeader（规定表格题头颜色的标签字符串赋给tableBody）、startRow、endRow(一对表格行标签的字符串加赋给tableBody）、
+		        addCell（一对构造表格单元的标签、内容和背景色的字符串加赋给tableBody）、buildHtml（检测heading为真则将对应的	
+		        结束表头和表格的字符串加赋给tableBody）
+	Simulation.java:引入一个关于向量的类、定义用final修饰的两个私有变量maxRow和maxColumn、名为catfishes的向量、构造方法（将构造函数
+		          中的两个字符串赋给两个私有变量，规定向量初始容量为50）、定义两个get方法（获得两个私有变量的值）、方法addCatfish（
+		          检测paramCatfish是否为空或paramCatfish中是否已有catfishes、若均无则向catfishes中加入paramCatfish）、剩下的部分不太
+		          看得懂（不太清楚向量类中有什么规定）
+	SimulationServlet.java：规定了Servlet的名字和urlPatterns，doPost方法（完成了很多对象的创建，包括鱼和表格（池塘））
+	SimulationView.java:应用了之前几个类中规定的方法构建Servlet页面
+（有修改）index.html：html页面，改了一下居中和背景颜色
+（有修改）web.xml：按照要求配置Servlet
